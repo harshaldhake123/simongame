@@ -47,9 +47,12 @@ function checkAnswer(currentLevel) {
         }
     } else {
         $("body").addClass("game-over");
+
         setTimeout(function () {
             $("body").removeClass("game-over")
+            playSound("wrong");
         }, 200);
+
         $("#level-title").text("Game Over, Press Any Key to Restart");
         startOver();
     }
